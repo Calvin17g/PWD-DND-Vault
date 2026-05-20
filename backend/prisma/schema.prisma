@@ -1,0 +1,68 @@
+// This is your Prisma schema file.
+// Learn more about it at: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id         Int         @id @default(autoincrement())
+  username   String      @unique
+  email      String      @unique
+  password   String
+  characters Character[]
+  createdAt  DateTime    @default(now())
+}
+
+model Character {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Identity
+  name       String
+  race       String
+  class      String
+  level      Int     @default(1)
+  background String?
+
+  // Core Stats
+  strength     Int @default(10)
+  dexterity    Int @default(10)
+  constitution Int @default(10)
+  intelligence Int @default(10)
+  wisdom       Int @default(10)
+  charisma     Int @default(10)
+
+  // Combat
+  hitPoints     Int    @default(10)
+  maxHitPoints  Int    @default(10)
+  tempHitPoints Int    @default(0)
+  armorClass    Int    @default(10)
+  initiative    Int    @default(0)
+  speed         Int    @default(30)
+  hitDice       String @default("1d8")
+
+  // Death Saves stored as JSON { successes: 0, failures: 0 }
+  deathSaves Json @default("{\"successes\": 0, \"failures\": 0}")
+
+  // Skills — proficiency booleans stored as JSON
+  skills Json @default("{\"acrobatics\":false,\"animalHandling\":false,\"arcana\":false,\"athletics\":false,\"deception\":false,\"history\":false,\"insight\":false,\"intimidation\":false,\"investigation\":false,\"medicine\":false,\"nature\":false,\"perception\":false,\"performance\":false,\"persuasion\":false,\"religion\":false,\"sleightOfHand\":false,\"stealth\":false,\"survival\":false}")
+
+  // Saving Throws proficiency booleans stored as JSON
+  savingThrows Json @default("{\"strength\":false,\"dexterity\":false,\"constitution\":false,\"intelligence\":false,\"wisdom\":false,\"charisma\":false}")
+
+  // Free-form text fields
+  abilities String?
+  weapons   String?
+  inventory String?
+  spells    String?
+  notes     String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

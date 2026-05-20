@@ -1,0 +1,300 @@
+.detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.back-link {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.back-link:hover {
+  color: var(--gold);
+}
+
+.detail-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+}
+
+.detail-subtitle {
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Layout: left/right columns */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.detail-left,
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Section title */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+/* Ability scores grid */
+.ability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+/* Saving throws & skills */
+.saves-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.save-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.2rem 0;
+  font-size: 0.88rem;
+}
+
+.prof-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--muted);
+  background: transparent;
+  flex-shrink: 0;
+}
+.prof-dot.proficient {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.save-val {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--parchment);
+  width: 28px;
+  text-align: right;
+}
+
+.save-name {
+  color: var(--parchment-dark);
+}
+
+/* Combat row */
+.combat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.combat-row .stat-box {
+  flex: 1;
+  min-width: 70px;
+}
+
+/* HP Tracker */
+.hp-tracker {
+  border-color: rgba(139, 26, 26, 0.4);
+}
+
+.tracker-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--crimson-light);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(139, 26, 26, 0.3);
+}
+
+.hp-bar-wrap {
+  margin-bottom: 1rem;
+}
+
+.hp-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.hp-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hp-value {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hp-bar-bg {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hp-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition:
+    width 0.4s ease,
+    background 0.4s ease;
+}
+
+.hp-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hp-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.hp-delta-input {
+  width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Temp HP */
+.temp-hp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.temp-hp-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.temp-hp-val {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #3498db;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Death saves */
+.death-saves {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ds-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ds-type {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 75px;
+}
+
+.ds-success {
+  color: #2ecc71;
+}
+.ds-failure {
+  color: #e74c3c;
+}
+
+.ds-pips {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ds-pip {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--muted);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.ds-pip.filled.success {
+  background: #2ecc71;
+  border-color: #2ecc71;
+}
+.ds-pip.filled.failure {
+  background: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.tracker-saving {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  text-align: right;
+}
+
+/* Detail text cards */
+.detail-text {
+  font-size: 0.95rem;
+  color: var(--parchment-dark);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .detail-header {
+    flex-direction: column;
+  }
+  .detail-actions {
+    width: 100%;
+  }
+}
