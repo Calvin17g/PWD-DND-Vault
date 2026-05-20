@@ -1,0 +1,83 @@
+[
+  {
+    "name": "John Doe",
+    "race": "Elf",
+    "class": "Fighter",
+    "level": 6,
+    "background": "Smith",
+    "alignment": "Lawful Evil",
+    "experiencePoints": 0,
+    "strength": 20,
+    "dexterity": 16,
+    "constitution": 18,
+    "intelligence": 8,
+    "wisdom": 20,
+    "charisma": 8,
+    "hitPointsMax": 80,
+    "hitPointsCurrent": 80,
+    "armorClass": 19,
+    "initiative": 10,
+    "speed": 30,
+    "hitDice": "6d8",
+    "deathSaves": {
+      "successes": [
+        false,
+        false,
+        false
+      ],
+      "failures": [
+        false,
+        false,
+        false
+      ]
+    },
+    "proficiencyBonus": 3,
+    "savingThrows": {
+      "strength": false,
+      "dexterity": true,
+      "constitution": true,
+      "intelligence": false,
+      "wisdom": false,
+      "charisma": false
+    },
+    "skills": {
+      "acrobatics": false,
+      "animalHandling": true,
+      "arcana": false,
+      "athletics": false,
+      "deception": false,
+      "history": false,
+      "insight": false,
+      "intimidation": false,
+      "investigation": true,
+      "medicine": true,
+      "nature": false,
+      "perception": false,
+      "performance": false,
+      "persuasion": false,
+      "religion": false,
+      "sleightOfHand": true,
+      "stealth": false,
+      "survival": false
+    },
+    "proficiencies": "Drumming",
+    "languages": "Common \nElvish",
+    "equipment": "Longsword (+2)\nLeather Armor",
+    "spells": "",
+    "personalityTraits": "",
+    "ideals": "",
+    "bonds": "",
+    "flaws": "",
+    "backstory": "",
+    "appearance": "",
+    "age": "",
+    "height": "",
+    "weight": "",
+    "eyes": "",
+    "skin": "",
+    "hair": "",
+    "maxHitDice": 6,
+    "id": "bb1faba4-4431-4451-b0f9-d2b513495c93",
+    "ownerId": "0d824ad8-fbd8-4f0a-acd3-df0ac9ef1fc6"
+  }
+]
